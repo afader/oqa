@@ -91,7 +91,7 @@ resulting from a longer crawl of WikiAnswers. Second, it groups questions into
 clusters, instead of enumerating all pairs of paraphrases. Third, it contains
 the answers, while the Paralex data does not.
 
-# Paraphrase Templates Data
+# Paraphrase Template Data
 
 # Query Rewrite Data
 
