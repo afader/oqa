@@ -1,3 +1,16 @@
+This is a repository for the code and data from the paper _Open Question
+Answering Over Curated and Extracted Knowledge Bases_ from KDD 2014. If you use
+any of these resources in a published paper, please use the following citation:
+
+    @inproceedings{Fader14,
+        author    = {Anthony Fader and Luke Zettlemoyer and Oren Etzioni},
+        title     = {{Open Question Answering Over Curated and Extracted
+                    Knowledge Bases}},
+        booktitle = {KDD},
+        year      = {2014}
+    }
+
+
 Code
 ===
 Coming soon!
