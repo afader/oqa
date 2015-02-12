@@ -1,0 +1,30 @@
+# ruleName syntactic-pattern := semantic-type semantic-pattern
+
+fullPatternSubj @whowhat (<rel>:@reverb) (<arg>:@np)      := unary $x : ($x, $rel, $arg)
+fullPatternDobj @whowhat @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel, $x)
+
+fullPatternWhereIn @where (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel in, $x)
+fullPatternWhereIs @where (<aux>:@aux) (<arg>:@np) := unary $x : ($arg, $aux in, $x)
+
+fullPatternWhenIn @when (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel in, $x)
+fullPatternWhenOn @when (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel on, $x)
+fullPatternWhenBeIn @when @be (<arg>:@np) := unary $x : ($arg, be in, $x)
+fullPatternWhenBeOn @when @be (<arg>:@np) := unary $x : ($arg, be on, $x)
+
+fullPatternTypeDobj (@whatwhich|@howmany) (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($x, instance of, $type) ($arg, $rel, $x)
+fullPatternTypeSubj (@whatwhich|@howmany) (<type>:@np) (<rel>:@reverb) (<arg>:@np) := unary $x : ($x, instance of, $type) ($x, $rel, $arg)
+fullPatternProperty @what @be @det (<rel>:@np) @of (<arg>:@np) := unary $x : ($arg, $rel, $x) 
+fullPatternDefn @whowhat @be (<arg>:@np) := unary $x : ($arg, instance of, $x)
+fullPatternRelType @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel $type, $x)
+fullPatternCop @whatwhich (<rel>:@np) @be (<arg>:@np) := unary $x : ($arg, $rel, $x)
+fullPatternHaveProp @wh (@be @det)? (<rel>:@np) (@aux|@relMarker) (<arg>:@np) @have := unary $x : ($arg, $rel, $x)
+fullPatternPoss @wh @be (<arg>:@np) @pos (<rel>:@np) := unary $x : ($arg, $rel, $x)
+fullPatternCopRel @wh (<rel>:@noun) @be (<arg>:@np) := unary $x : ($arg, $rel, $x)
+
+whIdentity @wh := identity
+auxIdentity @aux := identity
+punctIdentity @punct := identity
+relMarkerIdentity @relMarker := identity 
+conjIdentity @conj := identity
+ignoreTypesIdentity @ignoreTypes := identity
+quantIdentity @quant := identity

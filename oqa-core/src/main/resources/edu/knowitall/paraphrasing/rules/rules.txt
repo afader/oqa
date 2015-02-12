@@ -1,0 +1,11 @@
+inWhatDate @inOn @whatwhich @dateWord (<rest>:@any+) := When $rest
+whatDate @whatwhich @dateWord (<rest>:@any+) := When $rest
+commonPrefix1 <lemma='name'> @quant? (<rest>:@any+) := $rest
+commonPrefix2 <lemma='give'> <lemma='me'>? @quant? (<rest>:@any+) := $rest
+commonPrefix3 <lemma='tell'> <lemma='me'>? @quant? (<rest>:@any+) := $rest
+commonPrefix4 <lemma='list'> <lemma='me'>? @quant? (<rest>:@any+) := $rest
+dropTypeOf (<left>:@any*) @type @of (<right>:@any*) := $left $right
+dropNameOf (<left>:@any*) @det <lemma='name'> @of (<right>:@any*) := $left $right
+posToOf (<left>:@any*) (<arg>:@np) @pos (<rel>:@np) (<right>:@any*) := $left $rel of $arg $right
+presProgToSimple (<left>:@any*) @be (<rel>:@vbg) (<right>:@any*) := $left $rel $right
+dropAdverb (<left>:@any*) @adv+ (<right>:@any*) := $left $right

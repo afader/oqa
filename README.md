@@ -13,12 +13,42 @@ any of these resources in a published paper, please use the following citation:
 
 Code
 ===
-Coming soon!
+Warning: This project has lots of moving parts. It will probably take quite a
+bit of effort to get it running.
+
+## Dependencies
+Below are the dependencies used for OQA. Version numbers are what I have used,
+but other versions may be compatible.
+
+* sbt (0.13)
+* java (1.8.0)
+* scala (2.10)
+* Boost C++ libraries (1.5.7)
+* Python (2.7.8)
+* wget (1.15)
+
+## Code Structure
+OQA consists of the following components:
+
+* Solr indexes (used for storing triples, paraphrases, and query rewrites).
+* Language model (used for scoring answer derivation steps)
+* Question answering code (used for inference and learning)
+
+Getting the code running involves completing these steps in order:
+
+1. [Downloading the data](oqa-data/) in `oqa-data/`
+2. [Creating the indexes](oqa-solr/) in `oqa-solr/`
+3. [Building the language model](oqa-lm/) in `oqa-lm/`
+4. [Running the code](oqa-core/) in `oqa-core/`
+
+Please follow the above links to the individual README files. Each README
+will walk you through the steps.
 
 Data
 ===
+Below is a description of the data included with OQA.
 
-# Knowledge Base (KB) Data
+## Knowledge Base (KB) Data
 You can download the KB data at this url: 
 http://knowitall.cs.washington.edu/oqa/data/kb. The KB is divided into 20
 gzip-compressed files. The total compressed filesize is approximately 20GB; the
@@ -78,7 +108,7 @@ different `namespace` values is:
 | Open IE 4.0       | 67,221,551|
 | NELL              |  1,927,510|
 
-# WikiAnswers Corpus
+## WikiAnswers Corpus
 The WikiAnswers corpus contains clusters of questions tagged by WikiAnswers
 users as paraphrases. Each cluster optionally contains an answer provided by
 WikiAnswers users. There are 30,370,994 clusters containing an average of 25 
@@ -104,7 +134,7 @@ resulting from a longer crawl of WikiAnswers. Second, it groups questions into
 clusters, instead of enumerating all pairs of paraphrases. Third, it contains
 the answers, while the Paralex data does not.
 
-# Paraphrase Template Data
+## Paraphrase Template Data
 The paraphrase templates used in OQA are available for download at
 http://knowitall.cs.washington.edu/oqa/data/paraphrase-templates.txt.gz. The
 file is 90M compressed and 900M decompressed. Each line in the file contains a
@@ -151,7 +181,7 @@ The numeric values in the records are scaled to be in [0, 1].
 
 There are a total of 5,137,558 records in the file.
 
-# Query Rewrite Data
+## Query Rewrite Data
 The query rewrite operators are available for download at
 http://knowitall.cs.washington.edu/oqa/data/query-rewrites.txt.gz. The file is
 1G compressed and 8G decompressed. Each line in the file is a tab-separated
@@ -188,7 +218,7 @@ Each record has statistics computed over a pair of relation phrases `rel1` and
 
 There are a total of 74,461,831 records in the file.
 
-# Labeled Question-Answer Pairs
+## Labeled Question-Answer Pairs
 The questions and answers used for the evaluation are available at
 http://knowitall.cs.washington.edu/oqa/data/questions/. 
 

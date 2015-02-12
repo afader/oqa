@@ -1,0 +1,40 @@
+noun <pos=/N.*/|pos='CD'>
+commonNoun <pos=/NNS?/>
+propNoun <pos=/NNPS?/>
+adj <pos=/J.*/>
+adv <pos=/R.*/>
+verb <pos=/V.*/>
+det <pos='DT'|pos='PRP$'|lemma='the'|lemma='a'|lemma='an'>
+the <lemma='the'>
+num <pos='CD'>
+conj <pos='CC'|lemma='and'|lemma='but'>
+wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'> | (<lemma='how'> <lemma='many'|lemma='much'>)
+whowhat <lemma='what'|lemma='who'>
+whatwhich <lemma='what'|lemma='which'>
+what <lemma='what'>
+how <lemma='how'>
+howmany <lemma='how'> <lemma='much'|lemma='many'>
+some <lemma='some'>
+quant <lemma='some'|lemma='all'|lemma='any'|lemma='enough'|lemma='most'|lemma='both'|lemma='each'|lemma='either'|lemma='other'|lemma='one'|lemma='two'|lemma='three'|lemma='four'|lemma='five'|string=/^[0-9]$/> <lemma='of'>?
+where <lemma='where'>
+when <lemma='when'>
+ignoreTypes <lemma='thing'|lemma='stuff'|lemma='person'|lemma='people'>
+aux <lemma='be'|lemma='have'|lemma='do'>
+be <lemma='be'|lemma='s'|lemma="'s">
+pos <pos='POS'|lemma='s'|lemma="'s">
+nounMod <pos='$'|pos='PRP$'|pos='DT'|pos='JJ'|pos='JJS'|pos='JJR'|pos='POS'|pos='PRP'|pos='RB'|pos='RBR'|pos='RBS'|pos='VBN'|pos='VBG'>
+np (@nounMod* @noun+ @nounMod*)+
+vp (@aux? @adv* @verb+ @adv*)+
+relMarker <lemma='who'|lemma='that'|lemma='which'>
+prep <pos='RB'>* <pos='IN' | pos='TO' | pos='RP'> <pos='RB'>*
+reverb (@vp) | (@vp @prep) | (@vp @np @prep)
+reverbNoPrep @vp @np
+type <lemma='kind'|lemma='type'|lemma='sort'|lemma='example'|lemma='form'>
+of <lemma='of'>
+punct <pos=".">
+there <lemma='there'>
+dateWord <lemma='month'|lemma='day'|lemma='date'|lemma='year'>
+any <lemma=/.*/>
+inOn <lemma='in'|lemma='on'>
+have <lemma='have'>
+vbg <pos='VBG'>

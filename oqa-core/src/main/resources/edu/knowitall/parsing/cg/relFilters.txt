@@ -1,0 +1,3 @@
+^(do|does|did|doing)$
+^(be|is|are|was|were)$
+^(has|have|had|having)$

@@ -1,0 +1,5 @@
+is a	instance of	false	1	1	1	0		
+is an	instance of	false	1	1	1	0		
+be a	instance of	false	1	1	1	0		
+be an	instance of	false	1	1	1	0		
+isa	instance of	false	1	1	1	0
