@@ -17,6 +17,6 @@ echo "Indexing relsyn data..."
 gunzip -c "$relsyn_data" | python $index_relsyn_script localhost 8984 
 
 echo "Indexing triplestore data..."
-for file in `ls "$kb_data_dir" | grep part- | head -1 `; do
+for file in `ls "$kb_data_dir" | grep part-  `; do
   gunzip -c "${kb_data_dir}/${file}" | python $index_script localhost 8983 triplestore
 done
