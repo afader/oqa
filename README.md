@@ -14,7 +14,8 @@ any of these resources in a published paper, please use the following citation:
 Code
 ===
 Warning: This project has lots of moving parts. It will probably take quite a
-bit of effort to get it running.
+bit of effort to get it running. I would recommend playing with the data
+before trying to run the code.
 
 ## Dependencies
 Below are the dependencies used for OQA. Version numbers are what I have used,
