@@ -29,3 +29,7 @@ wget \
 wget \
   -O ${output_prefix}/knowitall.cs.washington.edu/oqa/data/wikianswers/questions-normalized.txt.gz \
   'https://s3-us-west-2.amazonaws.com/ai2-oqa/questions-normalized.txt.gz' 
+
+wget \
+  -O ${output_prefix}/knowitall.cs.washington.edu/oqa/data/wikianswers/wikianswers-brown-clusters-c1000.txt.gz \
+  'https://s3-us-west-2.amazonaws.com/ai2-oqa/wikianswers-brown-clusters-c1000.txt.gz'

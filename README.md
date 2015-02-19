@@ -134,6 +134,13 @@ resulting from a longer crawl of WikiAnswers. Second, it groups questions into
 clusters, instead of enumerating all pairs of paraphrases. Third, it contains
 the answers, while the Paralex data does not.
 
+We also provide a hierarchical clustering of the lowercased tokens in the 
+WikiAnswers corpus. We used [Percy Liang's implementation of the Brown 
+Clustering Algorithm](https://github.com/percyliang/brown-cluster) with
+1000 clusters (i.e. `--c 1000`). The raw output is available [here](https://s3-us-west-2.amazonaws.com/ai2-oqa/wikianswers-brown-clusters-c1000.txt.gz).
+You can browse the clusters [here](https://s3-us-west-2.amazonaws.com/ai2-oqa/wikianswers-cluster-viewer/cluster_viewer.html).
+We did not use these in the OQA system, but we probably should have.
+
 ## Paraphrase Template Data
 The paraphrase templates used in OQA are available for download at
 http://knowitall.cs.washington.edu/oqa/data/paraphrase-templates.txt.gz. The
