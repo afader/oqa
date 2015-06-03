@@ -25,8 +25,8 @@ def parse_line(line):
   return object
 
 def index_stream(input, port, coll, host='localhost', chunk_size=10000):
-  grouped = [x for x in grouped if x != None]
   grouped = grouper(input, chunk_size)
+  grouped = [x for x in grouped if x != None]
   added = 0
   for group in grouped:
     parsed = [parse_line(line) for line in group if line]
