@@ -243,3 +243,6 @@ http://knowitall.cs.washington.edu/oqa/data/questions/labels.txt. The format of
 this file is a newline-separated list of tab-separated (`LABEL`, truth value, 
 question, answer) records. The questions and answers may be lowercased and
 lemmatized.
+
+## System Output
+See the documentation in [oqa-data/predictions](oqa-data/predictions).
